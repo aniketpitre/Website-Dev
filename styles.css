@@ -123,6 +123,8 @@ h1, h2, h3, p { margin: 0; }
 .nav__brand .mark-svg { width: 34px; height: 34px; }
 .nav__name { font-family: var(--serif); font-size: 19px; letter-spacing: .01em; color: var(--forest); line-height: 1; display: flex; flex-direction: column; }
 .nav__name em { font-style: normal; font-family: var(--sans); font-size: 8.5px; letter-spacing: .38em; text-transform: uppercase; color: var(--leaf); margin-top: 4px; }
+.nav__loc { display: flex; align-items: center; gap: 3px; margin-top: 5px; font-family: var(--sans); font-size: 10px; letter-spacing: .03em; color: var(--ink-2); white-space: nowrap; }
+.nav__loc svg { width: 10px; height: 10px; flex: none; fill: none; stroke: var(--leaf); stroke-width: 1.2; }
 .nav__links { display: flex; gap: 30px; font-size: 14px; color: var(--ink-2); }
 .nav__links a { position: relative; transition: color .3s; }
 .nav__links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 1.5px; background: var(--leaf); transform: scaleX(0); transform-origin: right; transition: transform .5s var(--ease); }
@@ -159,7 +161,8 @@ h1, h2, h3, p { margin: 0; }
 }
 .hero__copy { text-align: center; max-width: 900px; position: relative; z-index: 2; }
 .hero__title { font-size: clamp(72px, 15vw, 200px); color: var(--forest); margin-bottom: 26px; }
-.hero__title .line { display: block; overflow: hidden; padding-bottom: .06em; }
+/* extra bottom room so descenders (the "g" in change) are not clipped by the reveal mask; negative margin keeps spacing identical */
+.hero__title .line { display: block; overflow: hidden; padding-bottom: .24em; margin-bottom: -.1em; }
 .hero__title .word { display: inline-block; }
 .hero__title i { font-style: normal; color: var(--leaf); }
 .hero__sub { font-size: clamp(18px, 1.7vw, 22px); color: var(--ink-2); max-width: 30em; margin: 0 auto 34px; }
