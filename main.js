@@ -85,6 +85,18 @@
     });
   });
 
+  /* ---------------- Mobile quick-action bar ---------------- */
+  const mbar = $('[data-mbar]');
+  const contact = $('#contact');
+  const updateBar = () => {
+    const y = window.scrollY;
+    const past = y > window.innerHeight * 0.6;
+    const atContact = contact.getBoundingClientRect().top < window.innerHeight * 0.8;
+    mbar.classList.toggle('is-visible', past && !atContact);
+  };
+  window.addEventListener('scroll', updateBar, { passive: true });
+  if (lenis) lenis.on('scroll', updateBar);
+
   /* ---------------- Intro ---------------- */
   const intro = gsap.timeline({ defaults: { ease: 'expo.out' } });
   const loader = $('.loader');
