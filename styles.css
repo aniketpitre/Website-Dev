@@ -594,3 +594,17 @@ a, button { touch-action: manipulation; }
   .footer__inner { flex-direction: column; align-items: flex-start; }
 }
 .menu .menu__actions .btn--solid { color: var(--beige); }
+
+/* Wider-than-phone screens (tablets, zoomed or narrow desktop windows):
+   keep the quick-action bar as a compact centred pill instead of full width */
+@media (min-width: 561px) and (max-width: 860px) {
+  .mbar { left: 50%; right: auto; width: 360px; transform: translate(-50%, calc(100% + 30px)); }
+  .mbar.is-visible { transform: translateX(-50%); }
+  .menu-open .mbar { transform: translate(-50%, calc(100% + 30px)); }
+}
+
+/* Desktop: keep the email on one line in the contact cards */
+@media (min-width: 861px) {
+  .contact { grid-template-columns: 1fr 1fr 1.5fr; }
+  .contact__value { font-size: clamp(17px, 1.55vw, 20px); white-space: nowrap; }
+}
