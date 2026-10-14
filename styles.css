@@ -471,3 +471,6 @@ h1, h2, h3, p { margin: 0; }
   .hscroll__progress { margin-top: clamp(20px, 4vh, 40px); }
 }
 @media (max-width: 560px) { .hide-sm { display: none; } }
+.svg-slot { display: inline-block; }
+.nav__brand .svg-slot { width: 34px; height: 34px; }
+.footer__logo .svg-slot { width: 46px; height: 46px; }

@@ -1,5 +1,15 @@
 /* Shivneri Enterprises — motion layer (GSAP + ScrollTrigger + Lenis) */
-(() => {
+(async () => {
+  /* Inline the logo SVGs so their paths can be animated and recoloured */
+  await Promise.all(['full', 'mark'].map(async (k) => {
+    const slots = document.querySelectorAll(`[data-svg="${k}"]`);
+    try {
+      const res = await fetch(`/assets/brand/logo-${k}.svg`);
+      const svg = await res.text();
+      slots.forEach((s) => (s.outerHTML = svg));
+    } catch (e) { /* logo stays empty; page still works */ }
+  }));
+
   const root = document.documentElement;
   const body = document.body;
   const $ = (s, c = document) => c.querySelector(s);
