@@ -114,13 +114,13 @@
     gsap.set('.hero__title .word, [data-hero-fade], .nav', { clearProps: 'all' });
   } else {
     intro
-      .from(markPaths, { opacity: 0, scale: 0.6, y: 18, transformOrigin: '50% 50%', duration: 1.1, stagger: 0.06 })
-      .from(wordPaths, { opacity: 0, y: 20, duration: 0.9, stagger: 0.04 }, '-=0.7')
-      .from(entPaths, { opacity: 0, duration: 0.8, stagger: 0.015 }, '-=0.6')
-      .to('.loader__bar span', { scaleX: 1, duration: 1.2, ease: 'power2.inOut' }, 0.2)
-      .to('.loader__logo', { scale: 0.92, opacity: 0, duration: 0.7, ease: 'power3.in' }, '+=0.15')
-      .to('.loader__bar', { opacity: 0, duration: 0.3 }, '<')
-      .to(loader, { yPercent: -100, duration: 1.1, ease: 'expo.inOut' }, '-=0.15')
+      .from(markPaths, { opacity: 0, scale: 0.6, y: 18, transformOrigin: '50% 50%', duration: 0.8, stagger: 0.04 })
+      .from(wordPaths, { opacity: 0, y: 20, duration: 0.65, stagger: 0.03 }, '-=0.5')
+      .from(entPaths, { opacity: 0, duration: 0.55, stagger: 0.01 }, '-=0.45')
+      .to('.loader__bar span', { scaleX: 1, duration: 0.85, ease: 'power2.inOut' }, 0.15)
+      .to('.loader__logo', { scale: 0.92, opacity: 0, duration: 0.5, ease: 'power3.in' }, '+=0.1')
+      .to('.loader__bar', { opacity: 0, duration: 0.25 }, '<')
+      .to(loader, { yPercent: -100, duration: 0.85, ease: 'expo.inOut' }, '-=0.1')
       .add(() => { body.classList.remove('is-loading'); lenis?.start(); loader.remove(); ScrollTrigger.refresh(); })
       .to('.hero__title .word', { yPercent: 0, duration: 1.4, stagger: 0.12 }, '-=0.55')
       .to('[data-hero-fade]', { opacity: 1, y: 0, duration: 1.2, stagger: 0.08 }, '-=1.1')
