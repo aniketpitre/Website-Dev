@@ -97,6 +97,44 @@
   window.addEventListener('scroll', updateBar, { passive: true });
   if (lenis) lenis.on('scroll', updateBar);
 
+  /* ---------------- Hero bags ---------------- */
+  const bags = $$('[data-bags] .bag');
+  const bagInners = bags.map((b) => $('.bag__inner', b));
+  const bagShadows = bags.map((b) => {
+    const sh = document.createElement('span');
+    sh.className = 'bag__shadow';
+    b.appendChild(sh);
+    return sh;
+  });
+  const visibleBags = () => bags.filter((b) => b.offsetParent !== null);
+  const centreOf = (list) => (list.length - 1) / 2;
+  bags.forEach((b, i) => (b.style.zIndex = 20 - Math.round(Math.abs(i - centreOf(bags)) * 2)));
+
+  // gentle idle sway, each bag on its own rhythm
+  const startIdle = () => bagInners.forEach((el, i) => {
+    gsap.to(el, {
+      y: -6 - (i % 3) * 3, rotation: i % 2 ? 1.6 : -1.6,
+      duration: 2.4 + (i % 4) * 0.45, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: (i % 5) * 0.18,
+    });
+  });
+
+  const dropBags = () => {
+    const vis = visibleBags();
+    const list = vis.map((b) => $('.bag__inner', b));
+    const shadows = vis.map((b) => $('.bag__shadow', b));
+    const c = centreOf(list);
+    return gsap.timeline({ onComplete: startIdle })
+      .from(shadows, { scale: 0.2, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: { each: 0.09, from: 'center' } }, 0.45)
+      .from(list, {
+        y: () => -(window.innerHeight * 0.7),
+        rotation: (i) => (i - c) * 7 + (i % 2 ? 10 : -10),
+        opacity: 0,
+        duration: 1.05,
+        ease: 'back.out(1.5)',
+        stagger: { each: 0.09, from: 'center' },
+      }, 0);
+  };
+
   /* ---------------- Intro ---------------- */
   const intro = gsap.timeline({ defaults: { ease: 'expo.out' } });
   const loader = $('.loader');
@@ -125,7 +163,7 @@
       .to('.hero__title .word', { yPercent: 0, duration: 1.4, stagger: 0.12 }, '-=0.55')
       .to('[data-hero-fade]', { opacity: 1, y: 0, duration: 1.2, stagger: 0.08 }, '-=1.1')
       .to('.nav', { opacity: 1, y: 0, duration: 1 }, '<')
-      .from('[data-hero-media]', { y: 120, opacity: 0, duration: 1.6 }, '-=1.2');
+      .add(dropBags(), '-=1.25');
   }
 
   /* Safety: never leave the page locked behind the loader */
@@ -138,25 +176,17 @@
   if (reduce) { initStudio(null); initCounters(true); return; }
 
   /* ---------------- Hero scroll ---------------- */
-  gsap.fromTo('[data-hero-media]', { scale: 0.86, borderRadius: 40 }, {
-    scale: 1, borderRadius: 20, ease: 'none',
-    scrollTrigger: { trigger: '[data-hero-media]', start: 'top 95%', end: 'center 50%', scrub: true },
-  });
-  gsap.fromTo('[data-hero-media] img', { scale: 1.25 }, {
-    scale: 1, ease: 'none',
-    scrollTrigger: { trigger: '[data-hero-media]', start: 'top bottom', end: 'bottom top', scrub: true },
-  });
-  gsap.to('[data-hero-overlay]', {
-    opacity: 1, ease: 'none',
-    scrollTrigger: { trigger: '[data-hero-media]', start: 'top 45%', end: 'top 15%', scrub: true },
-  });
-  gsap.from('[data-hero-overlay] > *', {
-    y: 40, stagger: 0.1, ease: 'none',
-    scrollTrigger: { trigger: '[data-hero-media]', start: 'top 50%', end: 'top 10%', scrub: true },
-  });
-  gsap.to('.hero__copy', {
+  gsap.to('.hero__copy, .hero__cta', {
     y: -90, opacity: 0, ease: 'none',
     scrollTrigger: { trigger: '.hero', start: 'top top', end: '45% top', scrub: true },
+  });
+  // bags fan out and lift away as the hero scrolls off
+  const bagScroll = gsap.timeline({
+    scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 0.6, invalidateOnRefresh: true },
+  });
+  bags.forEach((b, i) => {
+    const d = i - centreOf(bags);
+    bagScroll.to(b, { x: () => d * window.innerWidth * 0.035, y: () => -window.innerHeight * (0.12 + Math.abs(d) * 0.04), rotation: d * 3, ease: 'none' }, 0);
   });
 
   /* ---------------- Manifesto word scrub ---------------- */

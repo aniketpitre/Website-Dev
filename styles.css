@@ -158,38 +158,46 @@ h1, h2, h3, p { margin: 0; }
   padding: 120px var(--gutter) 60px;
   display: flex; flex-direction: column; align-items: center;
   background: radial-gradient(120% 70% at 50% 0%, var(--beige-2) 0%, var(--paper) 60%);
+  overflow-x: clip;
 }
-.hero__copy { text-align: center; max-width: 900px; position: relative; z-index: 2; }
+.hero__copy { text-align: center; max-width: 900px; position: relative; z-index: 3; }
 .hero__title { font-size: clamp(72px, 15vw, 200px); color: var(--forest); margin-bottom: 26px; }
 /* extra bottom room so descenders (the "g" in change) are not clipped by the reveal mask; negative margin keeps spacing identical */
 .hero__title .line { display: block; overflow: hidden; padding-bottom: .24em; margin-bottom: -.1em; }
 .hero__title .word { display: inline-block; }
 .hero__title i { font-style: normal; color: var(--leaf); }
 .hero__sub { font-size: clamp(18px, 1.7vw, 22px); color: var(--ink-2); max-width: 30em; margin: 0 auto 34px; }
-.hero__cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.hero__stage { width: 100%; margin-top: clamp(48px, 7vw, 90px); display: flex; justify-content: center; }
-.hero__media {
-  position: relative; margin: 0; width: min(100%, 1100px); aspect-ratio: 16 / 10;
-  border-radius: var(--radius); overflow: hidden; background: var(--beige);
-  box-shadow: 0 40px 80px -40px rgba(15, 77, 46, .35);
-  will-change: transform;
+.hero__cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 3; }
+@media (min-width: 861px) {
+  .hero { padding-top: 104px; padding-bottom: 24px; }
+  .hero__title { font-size: clamp(60px, min(9.4vw, 15vh), 148px); margin-bottom: 20px; }
+  .hero__title .line { display: inline-block; }
+  .hero__sub { margin-bottom: 28px; }
 }
-.hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; transform: scale(1.15); will-change: transform; }
-.hero__overlay {
-  position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end;
-  padding: clamp(24px, 5vw, 64px); color: #fff;
-  background: linear-gradient(to top, rgba(11, 59, 35, .78) 0%, rgba(11, 59, 35, .2) 45%, transparent 70%);
-  opacity: 0;
+/* ---------- Bag stage: real catalogue bags animate into the hero ---------- */
+.bagstage {
+  position: relative; z-index: 1; width: min(1180px, 100%);
+  flex: 1 1 auto; min-height: clamp(190px, 30vh, 340px); max-height: min(470px, 36vw);
+  margin-top: clamp(24px, 4vh, 48px);
 }
-.hero__overlay span { font-size: 13px; letter-spacing: .3em; text-transform: uppercase; opacity: .85; margin-bottom: 10px; }
-.hero__overlay strong { font-family: var(--serif); font-weight: 400; font-size: clamp(36px, 6vw, 84px); line-height: 1; letter-spacing: -.02em; }
-.scroll-cue {
-  position: absolute; left: var(--gutter); bottom: 28px; display: flex; align-items: center; gap: 12px;
-  font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-2);
+.bagstage::before {
+  content: ""; position: absolute; left: 4%; right: 4%; bottom: 2%; height: 16%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(108, 171, 61, .16), transparent 70%);
+  pointer-events: none;
 }
-.scroll-cue span { width: 1px; height: 36px; background: var(--line); position: relative; overflow: hidden; }
-.scroll-cue span::after { content: ""; position: absolute; left: 0; top: 0; width: 1px; height: 14px; background: var(--forest); animation: cue 2s var(--ease) infinite; }
-@keyframes cue { 0% { transform: translateY(-14px); } 100% { transform: translateY(36px); } }
+.bag { position: absolute; left: var(--x); bottom: 7%; height: var(--h); margin: 0; translate: -50% 0; }
+.bag__inner { height: 100%; transform-origin: 50% 100%; will-change: transform; }
+.bag img {
+  height: 100%; width: auto; max-width: none; display: block;
+  filter: drop-shadow(0 22px 18px rgba(15, 77, 46, .16));
+  transition: transform .6s var(--ease);
+}
+.bag__shadow {
+  position: absolute; left: 50%; bottom: -5%; width: 86%; height: 9%; translate: -50% 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(15, 77, 46, .28), transparent);
+}
+@media (max-width: 860px) { .bag--end { display: none; } }
+@media (hover: hover) { .bag:hover img { transform: translateY(-10px) scale(1.04) rotate(-1deg); } }
 
 /* =========================================================
    MANIFESTO
@@ -443,9 +451,7 @@ h1, h2, h3, p { margin: 0; }
   .steps { grid-template-columns: 1fr; }
   .steps li::before { display: none; }
   .hero { padding-top: 104px; }
-  .hero__media { aspect-ratio: 4 / 5; border-radius: 22px; }
   .hero .btn { width: 100%; }
-  .scroll-cue { display: none; }
   .swatch { width: 32px; height: 32px; }
   .studio__swatches { gap: 12px; }
   .nav__name em { letter-spacing: .3em; }
@@ -561,7 +567,12 @@ a, button { touch-action: manipulation; }
   .hero__title { font-size: clamp(76px, 25vw, 120px); }
   .hero__sub { font-size: 17px; margin-bottom: 28px; }
   .hero__cta { flex-direction: column; gap: 10px; }
-  .hero__stage { margin-top: 44px; }
+  /* phones: five bags between the intro text and the buttons */
+  .hero { padding-bottom: 40px; }
+  .bagstage { order: 2; min-height: 210px; max-height: 250px; flex: 0 0 auto; height: 52vw; margin: 8px 0 18px; }
+  .hero__cta { order: 3; width: 100%; }
+  .bag--wide { display: none; }
+  .bag { left: var(--xm); }
   .lead { font-size: 17px; }
 
   /* Values: compact rows instead of tall cards */
