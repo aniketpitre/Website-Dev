@@ -107,8 +107,15 @@
     return sh;
   });
   const visibleBags = () => bags.filter((b) => b.offsetParent !== null);
-  const centreOf = (list) => (list.length - 1) / 2;
-  bags.forEach((b, i) => (b.style.zIndex = 20 - Math.round(Math.abs(i - centreOf(bags)) * 2)));
+  const phone = () => window.matchMedia('(max-width: 560px)').matches;
+  // horizontal position in % (phones use their own layout)
+  const posOf = (b) => parseFloat(b.style.getPropertyValue(phone() ? '--xm' : '--x')) || 50;
+  const isBack = (b) => b.classList.contains('bag--back');
+  // Shivneri bag on top, BOPP front row next, jute & co. in the back row
+  bags.forEach((b) => {
+    const d = Math.abs(posOf(b) - 50);
+    b.style.zIndex = b.classList.contains('bag--hero') ? 40 : isBack(b) ? 10 - Math.round(d / 10) : 30 - Math.round(d / 5);
+  });
 
   // gentle idle sway, each bag on its own rhythm
   const startIdle = () => bagInners.forEach((el, i) => {
@@ -122,16 +129,21 @@
     const vis = visibleBags();
     const list = vis.map((b) => $('.bag__inner', b));
     const shadows = vis.map((b) => $('.bag__shadow', b));
-    const c = centreOf(list);
+    // the Shivneri bag lands first, then the front row outwards, then the back row
+    const delayOf = (i) => {
+      const b = vis[i];
+      const d = Math.abs(posOf(b) - 50) / 50;
+      return isBack(b) ? 0.22 + d * 0.4 : d * 0.5;
+    };
     return gsap.timeline({ onComplete: startIdle })
-      .from(shadows, { scale: 0.2, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: { each: 0.09, from: 'center' } }, 0.45)
+      .from(shadows, { scale: 0.2, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: (i) => delayOf(i) }, 0.42)
       .from(list, {
-        y: () => -(window.innerHeight * 0.7),
-        rotation: (i) => (i - c) * 7 + (i % 2 ? 10 : -10),
+        y: () => -(window.innerHeight * 0.75),
+        rotation: (i) => ((posOf(vis[i]) - 50) / 50) * 18 + (i % 2 ? 8 : -8),
         opacity: 0,
         duration: 1.05,
         ease: 'back.out(1.5)',
-        stagger: { each: 0.09, from: 'center' },
+        stagger: (i) => delayOf(i),
       }, 0);
   };
 
@@ -160,10 +172,10 @@
       .to('.loader__bar', { opacity: 0, duration: 0.25 }, '<')
       .to(loader, { yPercent: -100, duration: 0.85, ease: 'expo.inOut' }, '-=0.1')
       .add(() => { body.classList.remove('is-loading'); lenis?.start(); loader.remove(); ScrollTrigger.refresh(); })
-      .to('.hero__title .word', { yPercent: 0, duration: 1.4, stagger: 0.12 }, '-=0.55')
-      .to('[data-hero-fade]', { opacity: 1, y: 0, duration: 1.2, stagger: 0.08 }, '-=1.1')
-      .to('.nav', { opacity: 1, y: 0, duration: 1 }, '<')
-      .add(dropBags(), '-=1.25');
+      .add(dropBags(), '-=0.55')
+      .to('.hero__title .word', { yPercent: 0, duration: 1.3, stagger: 0.1 }, '-=1.0')
+      .to('[data-hero-fade]', { opacity: 1, y: 0, duration: 1.1, stagger: 0.07 }, '-=1.0')
+      .to('.nav', { opacity: 1, y: 0, duration: 1 }, '<');
   }
 
   /* Safety: never leave the page locked behind the loader */
@@ -176,7 +188,7 @@
   if (reduce) { initStudio(null); initCounters(true); return; }
 
   /* ---------------- Hero scroll ---------------- */
-  gsap.to('.hero__copy, .hero__cta', {
+  gsap.to('.hero__copy, .hero__cta, .scroll-arrow', {
     y: -90, opacity: 0, ease: 'none',
     scrollTrigger: { trigger: '.hero', start: 'top top', end: '45% top', scrub: true },
   });
@@ -185,7 +197,7 @@
     scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 0.6, invalidateOnRefresh: true },
   });
   bags.forEach((b, i) => {
-    const d = i - centreOf(bags);
+    const d = (posOf(b) - 50) / 10;
     bagScroll.to(b, { x: () => d * window.innerWidth * 0.035, y: () => -window.innerHeight * (0.12 + Math.abs(d) * 0.04), rotation: d * 3, ease: 'none' }, 0);
   });
 
