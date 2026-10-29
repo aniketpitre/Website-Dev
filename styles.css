@@ -362,12 +362,16 @@ h1, h2, h3, p { margin: 0; }
 .work { padding: clamp(110px, 14vw, 190px) 0 clamp(90px, 10vw, 140px); background: var(--beige); overflow: hidden; }
 .work .h2 { color: var(--forest); }
 .work .section-head { margin-bottom: clamp(40px, 5vw, 64px); }
-.work__marquee { display: grid; gap: 20px; }
-.work__row { display: flex; width: max-content; }
-.work__track { display: flex; gap: 20px; padding-right: 20px; animation: work-scroll var(--dur, 70s) linear infinite; }
-.work__row--b .work__track { --dur: 80s; animation-direction: reverse; }
-.work__row:hover .work__track { animation-play-state: paused; }
-@keyframes work-scroll { to { transform: translateX(-100%); } }
+.work__marquee { display: grid; gap: 2px; }
+.work__row {
+  display: flex; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none;
+  padding: 6px 0 18px; cursor: grab; -webkit-user-select: none; user-select: none;
+}
+.work__row::-webkit-scrollbar { display: none; }
+.work__row.is-dragging { cursor: grabbing; }
+.work__row.is-dragging .work__card { pointer-events: none; }
+.work__track { display: flex; flex: none; gap: 20px; padding-right: 20px; }
+.work__card img { -webkit-user-drag: none; }
 .work__card {
   position: relative; margin: 0; flex: none; width: clamp(200px, 19vw, 270px); aspect-ratio: 3 / 4;
   border-radius: 22px; overflow: hidden; background: #fff;
@@ -385,18 +389,14 @@ h1, h2, h3, p { margin: 0; }
 @media (hover: hover) { .work__card:hover { transform: translateY(-6px); } }
 .work__cta { text-align: center; margin-top: clamp(40px, 5vw, 60px); }
 @media (max-width: 560px) {
-  .work__marquee, .work__track { gap: 12px; }
+  .work__track { gap: 12px; }
   .work__track { padding-right: 12px; }
   .work__card { width: 168px; border-radius: 18px; }
   .work__card figcaption { left: 8px; right: 8px; bottom: 8px; padding: 8px 10px; }
   .work__card strong { font-size: 14px; }
   .work__card span { font-size: 11px; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .work__row { width: auto; overflow-x: auto; }
-  .work__track { animation: none; }
-  .work__track[aria-hidden] { display: none; }
-}
+
 
 /* =========================================================
    ORDER

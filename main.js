@@ -18,6 +18,66 @@
 
   $$('[data-year]').forEach((el) => (el.textContent = new Date().getFullYear()));
 
+  /* ---------------- Our work: rows glide on their own, and can be swiped / dragged ---------------- */
+  $$('.work__row').forEach((row, idx) => {
+    const track = $('.work__track', row);
+    const dir = row.classList.contains('work__row--b') ? -1 : 1;
+    const speed = idx ? 26 : 32; // px per second
+    let pos = 0, last = 0, pausedUntil = 0, hovering = false, visible = false, dragging = false;
+    let dragX = 0, dragPos = 0, moved = 0;
+    const loopW = () => track.offsetWidth; // one full set of cards (the second set is a copy)
+    const wrap = () => {
+      const w = loopW();
+      if (!w) return;
+      if (pos >= w) pos -= w;
+      if (pos < 0) pos += w;
+    };
+    const apply = () => { wrap(); row.scrollLeft = pos; };
+    const pause = (ms = 2200) => { pausedUntil = performance.now() + ms; };
+    requestAnimationFrame(() => { pos = dir < 0 ? loopW() * 0.5 : 0; apply(); });
+
+    // manual scrolling (finger swipe, trackpad, scrollbar): follow it and keep looping
+    row.addEventListener('scroll', () => {
+      if (Math.abs(row.scrollLeft - pos) > 1.5) { pos = row.scrollLeft; pause(); }
+      const w = loopW();
+      if (w && (row.scrollLeft >= w || row.scrollLeft <= 0)) { pos = row.scrollLeft; apply(); }
+    }, { passive: true });
+    row.addEventListener('touchstart', () => pause(4000), { passive: true });
+    row.addEventListener('wheel', (e) => { if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) pause(); }, { passive: true });
+    row.addEventListener('mouseenter', () => (hovering = true));
+    row.addEventListener('mouseleave', () => (hovering = false));
+
+    // mouse drag on computers
+    row.addEventListener('pointerdown', (e) => {
+      if (e.pointerType !== 'mouse' || e.button !== 0) return;
+      dragging = true; moved = 0; dragX = e.clientX; dragPos = pos;
+      row.setPointerCapture(e.pointerId);
+    });
+    row.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      const dx = e.clientX - dragX;
+      moved = Math.max(moved, Math.abs(dx));
+      if (moved > 4) row.classList.add('is-dragging');
+      pos = dragPos - dx; apply();
+    });
+    const endDrag = () => { if (!dragging) return; dragging = false; row.classList.remove('is-dragging'); pause(); };
+    row.addEventListener('pointerup', endDrag);
+    row.addEventListener('pointercancel', endDrag);
+
+    new IntersectionObserver(([en]) => (visible = en.isIntersecting)).observe(row);
+
+    const tick = (t) => {
+      const dt = last ? Math.min(0.05, (t - last) / 1000) : 0;
+      last = t;
+      if (!reduce && visible && !hovering && !dragging && t > pausedUntil) {
+        pos += dir * speed * dt;
+        apply();
+      }
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  });
+
   /* If the animation libraries fail to load, show the static page. */
   if (!window.gsap || !window.ScrollTrigger) {
     root.classList.remove('js');
