@@ -401,8 +401,13 @@
     const ind = $('[data-tab-ind]', studio);
     let front = 0;
 
-    // Preload so swaps are instant
-    Object.values(ranges).flat().forEach(([, , , f]) => { const i = new Image(); i.src = `/assets/img/${f}.webp`; });
+    // Preload the colour photos only when the visitor gets near this section, so they never slow the page opening
+    let preloaded = false;
+    const preload = () => {
+      if (preloaded) return; preloaded = true;
+      Object.values(ranges).flat().forEach(([, , , f]) => { const i = new Image(); i.decoding = 'async'; i.src = `/assets/img/${f}.webp`; });
+    };
+    new IntersectionObserver((en, ob) => { if (en[0].isIntersecting) { preload(); ob.disconnect(); } }, { rootMargin: '800px 0px' }).observe(studio);
 
     const show = (item) => {
       const [name, hex, size, file] = item;
