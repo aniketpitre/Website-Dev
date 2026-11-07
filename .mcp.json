@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "workato": {
+      "type": "http",
+      "url": "https://app.trial.workato.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${WORKATO_API_TOKEN:-proxy-injected}"
+      }
+    }
+  }
+}
