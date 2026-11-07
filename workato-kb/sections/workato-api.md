@@ -1,0 +1,46 @@
+# Section: workato-api (44 pages)
+
+- `docs/workato-api.md` — **Developer API**: The Developer API lets you manage recipes, connections, jobs, and on-prem agents, and automate every aspect of your Workato workspace.
+- `docs/workato-api/account-properties.md` — **Developer API - Environment properties**: Reference for the Workato environment properties API, with endpoints to list properties by prefix and upsert environment properties.
+- `docs/workato-api/activity-reference.md` — **Developer API - Activity audit log reference**: Reference for the resource types and event types you can use to filter responses from the Workato activity audit log API.
+- `docs/workato-api/agent-studio.md` — **Developer API - Agent Studio**: Reference for the Agent Studio API to create and manage genies, knowledge bases, skills, and guardrail policies programmatically.
+- `docs/workato-api/api-client-apis.md` — **Developer API - API clients**: Reference for the Workato developer API endpoints to list, create, update, delete, and regenerate tokens for API clients and client roles.
+- `docs/workato-api/api-clients.md` — **API clients and roles**: Learn how Developer API clients scope endpoint, environment, and project access at the workspace level and replace legacy full-access API keys.
+- `docs/workato-api/api-connectors.md` — **Developer API - Connectors**: Reference for the Workato developer API endpoints that return standard and platform connector metadata, useful for building an app marketplace.
+- `docs/workato-api/api-platform.md` — **Developer API - API platform**: Reference for the API platform endpoints to create and manage API collections, endpoints, clients, and access profiles in Workato.
+- `docs/workato-api/collaborator-groups.md` — **Developer API - Collaborator groups**: Reference for the Workato developer API endpoints to list, create, update, delete collaborator groups and manage their members and project grants.
+- `docs/workato-api/connections-parameters-dev.md` — **Developer API - Connection parameters reference**: Reference for the connection parameters and provider values required to configure connectors using the Developer API.
+- `docs/workato-api/connections.md` — **Developer API - Connections**: Reference for the Workato developer API endpoints to list, create, update, disconnect, and delete connections, and get picklist values.
+- `docs/workato-api/cross-workspace-sharing.md` — **Developer API - Cross-workspace sharing**: Reference for the Workato cross-workspace sharing API to create, list, update, and revoke cross-workspace grants, review incoming grants, and discover grantable environments.
+- `docs/workato-api/custom-oauth-profiles.md` — **Developer API - Custom OAuth profiles**: Reference for the Workato developer API endpoints to list, create, update, and delete custom OAuth profiles.
+- `docs/workato-api/custom_connectors.md` — **Developer API - Custom connectors**: Reference for the Workato custom connectors API to create, search, update, validate, release, and share connectors and generate schema from JSON or CSV.
+- `docs/workato-api/data-pipelines.md` — **Developer API - Data pipelines**: Reference for the Workato data pipelines API to create, configure, start, stop, and clone pipelines, re-sync objects, and monitor object runs.
+- `docs/workato-api/data-tables.md` — **Developer API - Data tables**: Reference for the Workato data tables API to list, create, update, delete, and truncate tables and manipulate their records programmatically.
+- `docs/workato-api/environment-management.md` — **Developer API - Environment management**: Reference for the Workato environment management API to clear the secrets cache, retrieve activity audit logs, and manage tags.
+- `docs/workato-api/environment-roles.md` — **Developer API - Environment roles**: Reference for the Workato environment roles API to list, retrieve, create, update, and delete environment roles in your workspace.
+- `docs/workato-api/event-streams.md` — **Developer API - Event streams**: Reference for the Workato event streams API to publish and consume messages and create, list, update, purge, and delete event topics.
+- `docs/workato-api/folders.md` — **Developer API - Folders**: Reference for the Workato folders API to list, create, update, and manage folders and projects in your workspace.
+- `docs/workato-api/github-secret-scanning.md` — **GitHub secret scanning**: Learn how Workato integrates Developer API tokens with GitHub secret scanning to revoke leaked tokens and notify workspace admins.
+- `docs/workato-api/jobs.md` — **Developer API - Jobs**: Reference for the Workato jobs API to list recipe jobs, retrieve job metadata, resume a job, and repeat jobs programmatically.
+- `docs/workato-api/limits.md` — **Developer API rate limits**: Reference for Workato Developer API timeout, rate, and payload quotas that govern requests to the platform's developer endpoints.
+- `docs/workato-api/lookup-tables.md` — **Developer API - Lookup tables**: Reference for the Workato lookup tables API to list, create, and delete tables and add, get, update, and remove rows programmatically.
+- `docs/workato-api/mcp-servers.md` — **Developer API - MCP servers**: Reference for the Workato MCP servers API to create, update, and delete servers, assign tools and user groups, manage server policies, and manage hashed tokens.
+- `docs/workato-api/moving-to-api-client-authentication-faq.md` — **Legacy API key deprecation**: Learn how to migrate from deprecated legacy API keys to Developer API client authentication using Authorization Bearer headers.
+- `docs/workato-api/on-prem.md` — **Developer API - On-prem agents**: Reference for the Developer API on-premise endpoints to list, create, update, delete, and check the status of on-prem groups and agents.
+- `docs/workato-api/project-grants.md` — **Developer API - Project grants**: Reference for the Workato project grants API to get, list, add, update, and delete project role assignments for collaborators and groups.
+- `docs/workato-api/project-properties.md` — **Developer API - Project properties**: Reference for the Workato project properties API to list and upsert project-level properties by project ID and name prefix.
+- `docs/workato-api/project-roles.md` — **Developer API - Project roles**: Reference for the Workato project roles API to list, get, create, update, and delete project roles in a workspace.
+- `docs/workato-api/projects.md` — **Developer API - Projects**: Reference for the Workato projects API to build, deploy, and manage projects across the environments in your workspace.
+- `docs/workato-api/pubsub.md` — **Event streams public API**: Reference for the Workato Event streams public API to publish single messages, publish batches, and consume messages from event topics.
+- `docs/workato-api/recipe-lifecycle-management.md` — **Developer API - Recipe Lifecycle Management**: Reference for the Workato Recipe Lifecycle Management API to create export manifests and export, import, and download asset packages.
+- `docs/workato-api/recipes.md` — **Developer API - Recipes**: Reference for the Workato recipes API to create, copy, update, start, stop, delete, and list recipes and manage recipe versions.
+- `docs/workato-api/resources.md` — **Developer API endpoints**: Reference index of all Workato Developer API endpoints, including Agent Studio, API clients, projects, recipes, roles, and more.
+- `docs/workato-api/role-migration.md` — **Developer API - Role migration**: Reference for the Workato role migration API to convert legacy system and custom roles into environment and project roles.
+- `docs/workato-api/roles.md` — **Developer API - Legacy roles**: Reference for the Workato legacy roles API to list, update, and copy custom roles in the legacy permissions model.
+- `docs/workato-api/static-assets.md` — **Developer API - Resources**: Reference for the Workato resources API to list, upload, download, and delete static asset files within a project.
+- `docs/workato-api/tag-assignments.md` — **Developer API - Tag assignments**: Reference for the Workato tag assignments API to apply or remove tags from recipes and connections in your workspace.
+- `docs/workato-api/team.md` — **Developer API - Workspace collaborators**: Reference for the Workato workspace collaborators API to invite, list, update, and delete collaborators and manage their roles.
+- `docs/workato-api/test-automation.md` — **Developer API - Test Automation**: Reference for the Workato Test Automation API to run recipe test cases and poll run requests by manifest, project, folder, or recipe.
+- `docs/workato-api/users.md` — **Developer API - Workspace details**: Reference for the Developer API workspace details resource, with the GET /api/users/me endpoint that returns details about your workspace.
+- `docs/workato-api/workato-identity-iam.md` — **Developer API - Workato Identity IAM**: Reference for the Workato Identity IAM API endpoints to list, create, update, and delete users, user groups, and app links.
+- `docs/workato-api/xchange.md` — **Developer API - XChange**: Reference for the Workato XChange API to browse and create packages, review and approve versions, publish to the private library, distribute packages, manage sharing links, and view installation analytics.

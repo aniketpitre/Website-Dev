@@ -1,0 +1,53 @@
+<!-- source: https://docs.workato.com/en/connectors/zoho-crm/actions | lastmod: 2026-06-29 -->
+> Browse the actions supported by the Zoho CRM connector in Workato to create, update, and manage records in your Zoho CRM account.
+
+# Zoho CRM - Actions
+
+The Zoho CRM connector supports the following actions:
+
+- [Batch create custom objects action](/en/connectors/zoho-crm/actions/batch-create-custom-objects)
+- [Batch create standard objects action](/en/connectors/zoho-crm/actions/batch-create-standard-objects)
+- [Batch update custom objects action](/en/connectors/zoho-crm/actions/batch-update-custom-objects)
+- [Batch update standard objects action](/en/connectors/zoho-crm/actions/batch-update-standard-objects)
+- [Batch upsert custom objects action](/en/connectors/zoho-crm/actions/batch-upsert-custom-objects)
+- [Batch upsert standard objects action](/en/connectors/zoho-crm/actions/batch-upsert-standard-objects)
+- [Bulk create custom objects action](/en/connectors/zoho-crm/actions/bulk-create-custom-objects)
+- [Bulk create standard objects action](/en/connectors/zoho-crm/actions/bulk-create-standard-objects)
+- [Bulk update custom objects action](/en/connectors/zoho-crm/actions/bulk-update-custom-objects)
+- [Bulk update standard objects action](/en/connectors/zoho-crm/actions/bulk-update-standard-objects)
+- [Bulk upsert custom objects action](/en/connectors/zoho-crm/actions/bulk-upsert-custom-objects)
+- [Bulk upsert standard objects action](/en/connectors/zoho-crm/actions/bulk-upsert-standard-objects)
+- [Create account action](/en/connectors/zoho-crm/actions/create-account)
+- [Create campaign action](/en/connectors/zoho-crm/actions/create-campaign)
+- [Create contact action](/en/connectors/zoho-crm/actions/create-contact)
+- [Create deal action](/en/connectors/zoho-crm/actions/create-deal)
+- [Create invoice action](/en/connectors/zoho-crm/actions/create-invoice)
+- [Create lead action](/en/connectors/zoho-crm/actions/create-lead)
+- [Create vendor action](/en/connectors/zoho-crm/actions/create-vendor)
+- [Delete custom object action](/en/connectors/zoho-crm/actions/delete-custom-object)
+- [Delete standard object action](/en/connectors/zoho-crm/actions/delete-standard-object)
+- [Get lead by ID action](/en/connectors/zoho-crm/actions/get-lead-by-id)
+- [Get object by ID action](/en/connectors/zoho-crm/actions/get-object-by-id)
+- [Relate a member to a campaign action](/en/connectors/zoho-crm/actions/relate-member-to-campaign)
+- [Search accounts action (batch)](/en/connectors/zoho-crm/actions/search-accounts-batch)
+- [Search campaigns action (batch)](/en/connectors/zoho-crm/actions/search-campaigns-batch)
+- [Search contacts action (batch)](/en/connectors/zoho-crm/actions/search-contacts-batch)
+- [Search custom objects action](/en/connectors/zoho-crm/actions/search-custom-objects)
+- [Search deals action (batch)](/en/connectors/zoho-crm/actions/search-deals-batch)
+- [Search invoice action](/en/connectors/zoho-crm/actions/search-invoice)
+- [Search leads action (batch)](/en/connectors/zoho-crm/actions/search-leads-batch)
+- [Search products action (batch)](/en/connectors/zoho-crm/actions/search-products-batch)
+- [Search records using COQL query action](/en/connectors/zoho-crm/actions/search-records-using-coql-query)
+- [Search standard objects action](/en/connectors/zoho-crm/actions/search-standard-objects)
+- [Search vendors action (batch)](/en/connectors/zoho-crm/actions/search-vendors-batch)
+- [Update account action](/en/connectors/zoho-crm/actions/update-account)
+- [Update campaign action](/en/connectors/zoho-crm/actions/update-campaign)
+- [Update contact action](/en/connectors/zoho-crm/actions/update-contact)
+- [Update deal action](/en/connectors/zoho-crm/actions/update-deal)
+- [Update invoice action](/en/connectors/zoho-crm/actions/update-invoice)
+- [Update lead action](/en/connectors/zoho-crm/actions/update-lead)
+- [Update vendor action](/en/connectors/zoho-crm/actions/update-vendor)
+- [Upsert custom object action](/en/connectors/zoho-crm/actions/upsert-custom-object)
+- [Upsert standard object action](/en/connectors/zoho-crm/actions/upsert-standard-object)
+
+---

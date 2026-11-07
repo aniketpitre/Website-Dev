@@ -1,0 +1,29 @@
+# Section: wel (27 pages)
+
+- `docs/wel.md` — **Workato Expression Language**: WEL is Workato's transformation language - 245 built-in functions, 16 data types, and exact decimal arithmetic, running natively alongside your recipe.
+- `docs/wel/cookbook.md` — **WEL cookbook**: Worked WEL examples of common integration problems - joins, grouping, deduplication, CSV and JWT generation, and error-tolerant batch processing.
+- `docs/wel/errors.md` — **WEL error codes**: Every WEL error code, what it means, whether you can catch it, and what to do about it, covering all 72 codes across four error families in WEL.
+- `docs/wel/language.md` — **WEL language guide**: The syntax and rules behind every WEL expression, the 16 data types, operators and precedence, how expressions are structured, and string formatting.
+- `docs/wel/language/data-types.md` — **Data types**: The 16 WEL data types, including numbers, text, temporal types, collections, and the Skip marker, and how to choose the right one for each field.
+- `docs/wel/language/expressions.md` — **Expressions**: How a WEL expression is built, covering the input variable, field access, conditionals, let bindings, guards, lambdas, and named functions in a step.
+- `docs/wel/language/operators.md` — **Operators**: WEL operators for arithmetic, comparison, logic, concatenation, the pipeline operator, and the two fallback operators, with their precedence.
+- `docs/wel/language/strings.md` — **Strings and formatting**: WEL string literals, f-string interpolation, and format specifications for controlling padding, alignment, and decimal places in output text.
+- `docs/wel/quickstart.md` — **WEL quickstart**: Get started with WEL three ways - in the Transform Data action, with an external AI client, or with the wel command-line binary for fast local iteration.
+- `docs/wel/stdlib.md` — **WEL standard library**: The 245 built-in functions in WEL, spanning 16 categories - strings, lists, maps, temporal, numeric, crypto, encoding, escaping, and conversion.
+- `docs/wel/stdlib/binary.md` — **Binary functions**: WEL binary functions for base64, hex, and quoted-printable conversion, measuring byte length, and slicing raw byte data from files and digests.
+- `docs/wel/stdlib/common.md` — **Common functions**: WEL common functions for measuring length, testing whether a value is present, providing a fallback when it isn't, and inspecting a value's type.
+- `docs/wel/stdlib/conversion.md` — **Conversion functions**: WEL conversion functions for casting values to Integer, Decimal, Float, String, Bool, Binary, temporal types, and the Null and Skip sentinels.
+- `docs/wel/stdlib/crypto.md` — **Crypto functions**: WEL crypto functions for hashing, HMAC signatures, JWT encoding and verification, PBKDF2 key derivation, and AES encryption and decryption of data.
+- `docs/wel/stdlib/deep-map.md` — **Deep map functions**: WEL deep map functions for collecting values and transforming leaf values anywhere inside a deeply nested API response, regardless of depth.
+- `docs/wel/stdlib/encoding.md` — **Encoding functions**: WEL encoding functions for converting between text and bytes in a named character encoding, checking convertibility, and encoding MIME email headers.
+- `docs/wel/stdlib/escape.md` — **Escape functions**: WEL escape functions for safely embedding values in CSV, HTML, XML, JSON, JavaScript, URLs, SOQL, OData, and regular expressions without breaking syntax.
+- `docs/wel/stdlib/formatting.md` — **Formatting functions**: WEL formatting functions for rendering dates, times, numbers, and currency as display strings, parsing datetimes, joining lists, and serializing values to WEL.
+- `docs/wel/stdlib/json.md` — **JSON functions**: WEL JSON functions for parsing JSON strings into WEL values, serializing WEL values back to JSON text, and querying a structure with JSONPath.
+- `docs/wel/stdlib/list.md` — **List functions**: WEL list functions for selecting, transforming, ordering, grouping, and aggregating collections of records in recipe data, with syntax and examples for each.
+- `docs/wel/stdlib/map.md` — **Map functions**: WEL map functions for reading keys and values, merging maps, picking and removing fields, and flattening nested objects into a single level.
+- `docs/wel/stdlib/numeric.md` — **Numeric functions**: WEL numeric functions for rounding to integers and decimal places, taking absolute values, and testing for finite, infinite, or NaN numbers.
+- `docs/wel/stdlib/random.md` — **Random functions**: WEL random functions for generating UUIDs, random integers, floats, hexadecimal strings, and raw bytes for identifiers and idempotency keys.
+- `docs/wel/stdlib/string.md` — **String functions**: WEL string functions check, clean, extract, and replace text in recipe data, including case conversion, padding, and regular expression matching.
+- `docs/wel/stdlib/temporal.md` — **Temporal functions**: WEL temporal functions for reading date and time components, calendar and clock arithmetic, period boundaries, time zones, and durations, with examples.
+- `docs/wel/stdlib/unicode.md` — **Unicode functions**: WEL Unicode functions for grapheme-aware text handling, Unicode normalization, detecting deceptive text, and Japanese kana and width conversion.
+- `docs/wel/workato-expression-language-connector.md` — **Workato Expression Language connector - Transform data action**: Use WEL in recipes to reshape data for downstream recipe steps.

@@ -1,0 +1,28 @@
+# Section: insights (26 pages)
+
+- `docs/insights.md` — **Insights**: Insights is a data visualization and manipulation engine that enables you to make data-driven decisions.
+- `docs/insights/build-your-first-dashboard.md` — **Build your first dashboard**: Create a simple dashboard showing active recipes in your workspace using either the report builder or query builder.
+- `docs/insights/charts.md` — **Chart types**: Reference for Insights chart types, including tables, line, area, and bar graphs, pie charts, and KPI charts for visualizing your data.
+- `docs/insights/components-edit.md` — **Edit components**: Edit Insights components to analyze and present your data, including how to edit chart data, clone a component, and delete a component.
+- `docs/insights/concepts.md` — **Concepts**: Learn key concepts and understand how Insights can help you answer business questions.
+- `docs/insights/custom-columns.md` — **Calculated columns**: Calculated columns enable you to perform basic data manipulations and transformations within the dashboard.
+- `docs/insights/dashboard-templates.md` — **Dashboard templates**: Learn about Insights dashboard templates, including the workspace overview, project overview, and blank templates for building dashboards.
+- `docs/insights/dashboards-edit.md` — **Manage dashboards**: Manage Insights dashboards as your reporting needs change, including how to rename, clone, and delete dashboards in your workspace.
+- `docs/insights/dashboards-styling.md` — **Styling dashboards**: Style Insights dashboards using display components such as text, containers, dividers, and padding to customize their visual appearance.
+- `docs/insights/dashboards.md` — **Dashboards**: Learn about Insights dashboards, including the workspace overview and project overview templates that give visibility into your workspace.
+- `docs/insights/data-sources.md` — **Data sources**: Learn about Insights data sources that pull from your workspace, including projects, recipes, job history, data tables, and workflow apps.
+- `docs/insights/datetime-functions.md` — **Datetime functions**: Use datetime functions in calculated columns to extract, modify, and calculate time-based values within Insights dashboards.
+- `docs/insights/filter-groups.md` — **Filter groups**: Learn how Insights filter groups apply multiple filters across datasets and visualizations at the dashboard or container level.
+- `docs/insights/insights-faqs.md` — **Insights FAQs**: Answers to common questions about Workato Insights, including what it does, where to access it, and the types of data analysis it supports.
+- `docs/insights/math-functions.md` — **Math functions**: Use math functions in calculated columns to round and manipulate numerical values within Insights dashboards.
+- `docs/insights/navigate.md` — **Navigate Insights**: Learn how to navigate Insights through its three main interfaces: the homepage, the dashboard editor, and the chart editor.
+- `docs/insights/operators.md` — **Operators**: An operator is a symbol that specifies the action performed on one or more operands. Insights supports numerous operators in calculated columns.
+- `docs/insights/permissions.md` — **Manage roles and privileges**: Manage Insights roles and privileges with role-based access control, including how to create a custom environment role with the Insights privilege.
+- `docs/insights/queries.md` — **Query components**: Build queries on your Insights data with a no-code, step-based query builder that filters, summarizes, joins, sorts, and adds calculated columns.
+- `docs/insights/roi-dashboard.md` — **Build an ROI dashboard**: Learn how to build an ROI dashboard in Insights using an example scenario.
+- `docs/insights/string-functions.md` — **String functions**: Use string functions in calculated columns to manipulate, format, and analyze text-based values within Insights dashboards.
+- `docs/insights/understand-insights.md` — **Thinking with Insights**: Learn how to think about building impactful and meaningful dashboards with Insights.
+- `docs/insights/usage-inspiration.md` — **Usage inspiration**: Explore Insights dashboard ideas for usage, process, operational, and efficiency analytics to visualize how your Workato automations perform.
+- `docs/insights/view-dashboards.md` — **View dashboards**: Learn how Insights dashboards display data, use filter groups, and download dashboards as PNG files.
+- `docs/insights/workflow-app-dashboard-add.md` — **Workflow apps dashboards**: Create and assign an Insights dashboard inside a Workflow app to visualize automation data, with end-user download and print support.
+- `docs/insights/workspace-dashboards.md` — **Workspace-level dashboards**: Create a workspace-level Insights dashboard from a template and customize it with components to visualize data across your Workato workspace.

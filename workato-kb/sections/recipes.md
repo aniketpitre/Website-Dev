@@ -1,0 +1,68 @@
+# Section: recipes (66 pages)
+
+- `docs/recipes.md` — **Recipes**: Learn more about recipes in Workato.
+- `docs/recipes/actions.md` — **Actions**: Learn how Workato recipe actions work, including create, update, upsert, search, get, and delete operations across connectors.
+- `docs/recipes/best-practices-error-handling.md` — **Error handling and monitoring**: Learn how to handle errors and monitor Workato recipes using monitor blocks, conditional actions, stop actions, and custom alerts.
+- `docs/recipes/building-recipes.md` — **Recipe design**: Learn how to design Workato recipes by planning the goal, data flow, apps, triggers, actions, logic, and error handling.
+- `docs/recipes/cancel-job.md` — **Cancel Job**: Cancel a running Workato job from the job details page to stop a recipe that has a bug or appears stuck in processing.
+- `docs/recipes/collaboration-safeguards.md` — **Collaboration safeguards**: Learn how Workato collaboration safeguards show when teammates are editing a recipe to prevent lost work and conflicting changes.
+- `docs/recipes/connection-faqs.md` — **Connection FAQs**: Answers to common questions about Workato connections, including who can create them, how access works, and managing app instances.
+- `docs/recipes/copilot-data-usage.md` — **Copilots - Data usage**: Learn what recipe data Workato Copilot uses for each feature and how privacy and data security are handled across Copilots.
+- `docs/recipes/copilot-in-formula-mode.md` — **Formula Copilot**: Use Formula Copilot to get AI-powered formula suggestions in Workato recipes, building data transformations and formatting from prompts.
+- `docs/recipes/copilot-in-text-mode.md` — **Mapper Copilot**: Use Mapper Copilot for AI-powered text help in Workato recipes, composing text with datapills and searching pills directly in the editor.
+- `docs/recipes/data-pills-and-mapping.md` — **Datapills**: Learn how datapills work in Workato recipes as variables that map trigger and action output data between app fields.
+- `docs/recipes/decision-models.md` — **Decision models**: Learn how Workato decision models centralize reusable conditional business logic with decision tables, branches, and schema configs.
+- `docs/recipes/design-runtime-error.md` — **Common recipe errors**: Learn the difference between design-time and run-time recipe errors in Workato to troubleshoot and keep recipes running smoothly.
+- `docs/recipes/design-time-errors.md` — **Design-time errors**: Learn how to find and fix design-time errors in Workato recipes that prevent you from testing or starting the recipe.
+- `docs/recipes/design-time-errors/empty-actions.md` — **Action and fields errors**: Learn how to identify and fix action and field errors in Workato recipes, including empty actions, missing input fields, and invalid datapills.
+- `docs/recipes/design-time-errors/incorrect-formulas.md` — **Incorrect formulas and code actions**: Learn how to find and fix formula and code action errors in Workato recipes, including syntax mistakes in SQL, Python, Ruby, and JavaScript steps.
+- `docs/recipes/design-time-errors/opa-errors.md` — **On-prem agent (OPA) error troubleshooting**: Troubleshoot common Workato on-prem agent (OPA) errors covering setup, upgrades, runtime behavior, connections, and how to locate and read OPA logs.
+- `docs/recipes/design-time-errors/unestablished-connectivity.md` — **Unestablished connectivity**: Learn how to resolve unestablished connectivity errors in Workato recipes caused by changed credentials, missing permissions, or wrong configurations.
+- `docs/recipes/editor.md` — **Recipe editor**: An overview of the Workato recipe editor, including the recipe canvas, the toolbar, the step configuration panel, and how to refresh a recipe's schema.
+- `docs/recipes/error-notifications.md` — **Error notification emails**: Learn how Workato error notification emails work, including when alerts are sent, what triggers them, and how to manage recipients and alert scope.
+- `docs/recipes/error-type-id.md` — **Error type IDs**: Reference for Workato error type IDs and job error metadata fields used to detect, group, and target failures in Monitor actions for error blocks.
+- `docs/recipes/group-data-mapping.md` — **Group Data Mapping**: Learn how to use group data mapping in Workato to automatically map recipe fields when field names match datapill names across many fields.
+- `docs/recipes/infinite-loops.md` — **Infinite Loops**: Learn what infinite loops are in Workato recipes, how to recognize them in bi-directional syncs, and how to prevent recipes from triggering themselves.
+- `docs/recipes/job-debug-tracing.md` — **Job debug tracing**: Learn how to use Workato job debug tracing to view detailed HTTP requests, responses, headers, and payloads for each recipe action line.
+- `docs/recipes/jobs.md` — **Recipe jobs**: Learn how Workato jobs work, including job metadata, statuses, step details, durations, and tasks used to monitor and troubleshoot recipe runs.
+- `docs/recipes/keyboard-shortcuts.md` — **Keyboard shortcuts for recipe design**: Reference for Workato recipe design keyboard shortcuts on Mac and Windows, covering zoom, save, undo, redo, comments, and skipping steps.
+- `docs/recipes/limits.md` — **Recipe quotas**: Reference for Workato recipe design-time, run-time, and code size quotas, including how code size quotas vary across data centers.
+- `docs/recipes/long-actions.md` — **Long actions**: Learn how Workato long actions process bulk data over minutes to hours without timeout errors, including supported connectors and long pauses.
+- `docs/recipes/loops.md` — **Repeat while loop**: Learn how to build a Repeat while loop in Workato that runs steps at least once and continues while a condition is met, with page and count examples.
+- `docs/recipes/managing-recipes.md` — **Lifecycle and operations**: Manage Workato automation assets across their lifecycle with environments, the Operations hub dashboard, and the activity audit log.
+- `docs/recipes/memory-utilization.md` — **Memory optimization best practices**: Learn how to optimize recipe memory use, avoid temporary job dispatch failures, and handle large batches and files with batch and streaming actions.
+- `docs/recipes/monitor-errors-recipeops.md` — **Monitor errors with RecipeOps**: Set up RecipeOps triggers to monitor failed jobs and recipes stopped by Workato across your workspace, then send alerts or restart workflows.
+- `docs/recipes/naming-conventions.md` — **Naming conventions**: Apply consistent naming conventions for Workato projects and integration assets so teams understand each project's purpose and structure.
+- `docs/recipes/optimizing-task-usage.md` — **Optimizing task usage**: Learn strategies to reduce Workato task usage, including poll frequency, scheduled jobs, and batch or bulk triggers and actions.
+- `docs/recipes/performance-copilot.md` — **Performance Copilot**: Performance Copilot helps optimize your recipes by providing AI-powered evaluations and actionable suggestions across several dimensions, including cost, performance, security, and quality.
+- `docs/recipes/polling-intervals.md` — **Polling intervals**: Learn how Workato poll-based triggers check apps for new and updated records, default polling intervals by plan, and how to change them.
+- `docs/recipes/projects-faqs.md` — **Projects FAQs**: Answers to common questions about Workato projects, including what they are, how to organize them, and their key components.
+- `docs/recipes/rate-limiting.md` — **Rate limiting**: Learn how API rate limits cause errors in Workato recipes and how to optimize recipes or raise limits to avoid hitting them.
+- `docs/recipes/read-only-mode.md` — **View a recipe**: Learn how to view a recipe's steps, jobs, and version history in Workato without the risk of accidentally editing it.
+- `docs/recipes/recipe-copilot.md` — **Recipe Copilot**: Build recipes faster with Recipe Copilot, the AI feature in Workato that suggests steps and auto-completes tasks during recipe creation.
+- `docs/recipes/recipe-description.md` — **Docs Copilot**: Use Docs Copilot in Workato to generate recipe descriptions automatically so administrators and teammates can understand each recipe.
+- `docs/recipes/recipe-design-time-errors.md` — **Recipe design-time errors**: Learn how to resolve recipe design-time errors in Workato, including missing required fields, formula syntax errors, and invalid datapills.
+- `docs/recipes/recipe-job-errors.md` — **Job errors (recipe execution errors)**: Learn how to troubleshoot recipe job errors in Workato, including trigger errors, run-time formula errors, missing fields, and timeouts.
+- `docs/recipes/recipe-security.md` — **Security best practices for recipes**: Follow security best practices for Workato recipes, including storing credentials in connections, using a secrets manager, and data masking.
+- `docs/recipes/repeat-for-each.md` — **Repeat for each loop**: Learn how the Repeat for each loop in Workato runs nested recipe actions once for every item in a list datapill.
+- `docs/recipes/rerun-job.md` — **Rerunning jobs**: Learn how to rerun jobs in Workato, including scenarios, limitations, and best practices.
+- `docs/recipes/run-time-errors.md` — **Run-time errors**: Learn how to identify and troubleshoot run-time errors that occur during recipe job execution in Workato.
+- `docs/recipes/run-time-errors/action-internal-errors.md` — **Action and trigger errors**: Learn how to identify and troubleshoot action errors (caught and uncaught) and trigger errors during recipe job execution in Workato.
+- `docs/recipes/run-time-errors/apim-webhooks.md` — **APIM/webhook calls at run time**: Troubleshoot APIM and webhook call errors in Workato by checking network connectivity, access permissions, and HTTP status codes.
+- `docs/recipes/run-time-errors/internal-upstream-errors.md` — **Internal and upstream/downstream application errors**: Learn how to distinguish and troubleshoot internal Workato errors from upstream and downstream application errors in your recipes.
+- `docs/recipes/running-recipes.md` — **Running recipes**: Learn how to test, start, and stop recipes in Workato and read job reports for troubleshooting and debugging.
+- `docs/recipes/settings.md` — **Recipe settings**: Configure recipe settings in Workato, including concurrency, data retention, and sharing options from the Settings tab.
+- `docs/recipes/start-and-stop.md` — **Testing, starting, and stopping recipes**: Learn how to test, start, and stop recipes in Workato, including how recipes resume processing and when Workato stops them.
+- `docs/recipes/steps.md` — **Steps**: Learn how recipe steps in Workato define automation logic with actions, IF conditions, Repeat steps, and error handling.
+- `docs/recipes/steps/deprecated-steps/filter-faq.md` — **Filter step deprecation notice**: Answers to common questions about the deprecated Filter step type in Workato and how it affects recipes that still use it.
+- `docs/recipes/steps/skip-step.md` — **Skip step**: Learn how to mark recipe steps as skipped in Workato to build and test automation logic incrementally at runtime.
+- `docs/recipes/steps/steps-faqs.md` — **Steps FAQs**: Answers to common questions about recipe steps in Workato, including action steps, conditional steps, and repeat steps.
+- `docs/recipes/steps/undo-redo.md` — **Undo or redo steps**: Learn how to undo or redo the ten most recent step changes in a Workato recipe, such as adding, deleting, or skipping steps.
+- `docs/recipes/tags.md` — **Tags for assets**: Learn how tags in Workato categorize assets to organize and filter them across projects.
+- `docs/recipes/tasks-counters.md` — **Task counters**: Find where to view Workato task counts by job, recipe, and account, and learn how to monitor and manage task usage.
+- `docs/recipes/tasks.md` — **Tasks usage**: Learn what a Task is in Workato, how Tasks are counted across recipe actions and jobs, and the rules that determine Task usage.
+- `docs/recipes/testing.md` — **Testing recipes**: Test recipes in the Workato testing environment before starting them to confirm steps run correctly and data is processed accurately.
+- `docs/recipes/triggers.md` — **Triggers**: Triggers define events for recipe execution, process data reliably, and operate using polling, real-time, scheduled, or change data capture mechanisms with single, batch, or bulk dispatches.
+- `docs/recipes/using-recipe-copilot.md` — **Recipe Copilot in recipe building**: Use Recipe Copilot to sketch, build, and refine Workato recipes from a plain-language description of the automation you want.
+- `docs/recipes/version-management.md` — **Recipe version management**: Learn how Workato tracks recipe versions, logs recipe and schema changes, and lets you compare versions with Recipe Diff.
+- `docs/recipes/viewing-jobs-faqs.md` — **Viewing Jobs FAQs**: Answers to common questions about viewing Workato recipe jobs, including job reports, metadata, statuses, and data retention.

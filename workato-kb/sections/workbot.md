@@ -1,0 +1,29 @@
+# Section: workbot (27 pages)
+
+- `docs/workbot/block-kit.md` — **Block kit in Workbot for Slack**: Learn how to build rich Slack messages with Block Kit in Workbot, including stacking blocks across messages, modals, and app home surfaces.
+- `docs/workbot/configuring-slash-commands.md` — **Slash commands**: Learn how to configure and use slash commands with Workbot for Slack to trigger Workato recipes, including step-by-step setup with Jira as an example.
+- `docs/workbot/custom-workbot-vs-legacy-slash-commands.md` — **Enterprise Workbot vs Legacy slash commands**: Compare Enterprise Workbot slash commands and legacy Slack slash commands to choose the right approach for triggering Workato recipes.
+- `docs/workbot/guides/setup-workbot-for-slack-enterprise-grid.md` — **Set up Enterprise Workbot with Slack Enterprise Grid**: Set up an Enterprise Workbot to work with Slack Enterprise Grid, including requirements, OAuth profiles, and org-readiness configuration.
+- `docs/workbot/legacy-slash-commands.md` — **Legacy slash commands**: Set up legacy Slack slash commands and connect them to Workbot to run Workato recipes without creating an Enterprise Workbot app.
+- `docs/workbot/modals.md` — **Block kit in modals**: Learn how to build interactive Workbot modals with Block Kit input blocks to collect structured information from Slack users.
+- `docs/workbot/overview.md` — **Workbot**: Workbot is a Workato bot platform for building customizable workflows in Slack and Microsoft Teams to monitor apps and run ChatOps.
+- `docs/workbot/using-dialogs-with-workbot.md` — **Using Dialogs with Workbot**: Learn how to invoke Slack dialogs with Workbot to collect information from users interactively using a set of trigger and action recipes.
+- `docs/workbot/wait-for-user-action.md` — **Wait for user action in messages**: Configure the Wait for user action feature in Workbot post message and post command reply actions to handle multistep interactions in one recipe.
+- `docs/workbot/workbot-actions.md` — **Workato actions for Slack**: Reference for Workbot for Slack actions, including post command reply, post message, modals, app home views, and notifications.
+- `docs/workbot/workbot-advanced-topics.md` — **Designing the Workbot interface**: Learn how to design the Workbot for Slack conversational interface with buttons, menus, modals, and other Slack interactive components.
+- `docs/workbot/workbot-buttons.md` — **Workbot buttons**: Learn how Workbot buttons let Slack users trigger recipes and pass command inputs in one click, simplifying conversational workflows.
+- `docs/workbot/workbot-command-reply.md` — **Creating a Command Reply**: Configure the Workbot Post command reply action to respond to Slack users with queried data, confirmations, and message attachments.
+- `docs/workbot/workbot-commands.md` — **Build your first Workbot**: Build your first Workbot for Slack recipe using the New command trigger to run app actions and post replies in a Slack channel.
+- `docs/workbot/workbot-custom-bots.md` — **Create a Slack Enterprise Workbot**: Create a Slack Enterprise Workbot with custom branding, OAuth, and permissions to run multiple purpose-specific bots in one workspace.
+- `docs/workbot/workbot-dynamic-menus.md` — **Dynamic menus**: Learn how Workbot dynamic menus generate select-field options at runtime using a dynamic menu recipe in Slack command dialogs.
+- `docs/workbot/workbot-embed-config.md` — **Configure a Slack Enterprise Workbot for Embedded users**: Configure a Slack Enterprise Workbot for Embedded users, enabling partners to distribute a white-labeled Workbot to end customers.
+- `docs/workbot/workbot-ephemeral-messages.md` — **Ephemeral messages**: Configure Workbot ephemeral messages so only the user who invokes a Slack command sees context-sensitive replies in the channel.
+- `docs/workbot/workbot-for-slack-setup.md` — **Set up Workbot for Slack**: Set up a Workbot for Slack connection, configure OAuth, connect an NLU provider, and invite Workbot to your Slack channels.
+- `docs/workbot/workbot-granular-permissions.md` — **Moving to granular permission scopes**: Learn how to migrate Enterprise Workbots from the deprecated Slack bot scope to granular permission scopes and what changes.
+- `docs/workbot/workbot-message-menus.md` — **Workbot message menus**: Learn how Workbot message menus collapse multiple actions into a Slack drop-down so users trigger recipes without remembering commands.
+- `docs/workbot/workbot-shortcuts.md` — **New shortcut trigger (real-time)**: Learn how the Workbot New shortcut trigger launches recipes from Slack global and message shortcuts to turn conversations into tasks.
+- `docs/workbot/workbot-trigger-faqs.md` — **Workbot trigger FAQs**: Answers to common questions about Workbot for Slack triggers, including how commands are processed and which triggers are available.
+- `docs/workbot/workbot-triggers.md` — **Workbot triggers for Slack**: Learn how Workbot for Slack triggers process commands, events, shortcuts, and mentions to start Workato recipes from Slack.
+- `docs/workbot/workbot-troubleshooting.md` — **Troubleshooting Workbot for Slack**: Troubleshoot common Workbot for Slack errors, including recipe execution failures, offline bots, and untriggered custom bot recipes.
+- `docs/workbot/workbot-update-message.md` — **Updating Workbot messages**: Learn how to update earlier Workbot messages in Slack to replace buttons or menus and reduce chat clutter using a post message action.
+- `docs/workbot/workbot.md` — **Workbot for Slack**: Workbot for Slack is a Workato chatbot that lets your team monitor business apps, post notifications, and update data from within Slack.

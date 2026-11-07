@@ -1,0 +1,35 @@
+# Section: data-tables (33 pages)
+
+- `docs/data-tables.md` — **Data tables**: Workato data tables store data referenced by recipes in a scalable, secure, spreadsheet-like interface, and power data storage for workflow apps.
+- `docs/data-tables/connector/create-record-action.md` — **Create record action**: The create record action creates a new record in a data table you specify.
+- `docs/data-tables/connector/create-record-batch-action.md` — **Create records action (batch)**: The create records batch action creates new records in a data table you specify.
+- `docs/data-tables/connector/delete-record-action.md` — **Delete record action**: The delete record action deletes a record you specify from a data table using its ID.
+- `docs/data-tables/connector/delete-record-batch-action.md` — **Delete records action (batch)**: The delete records batch action deletes multiple records in a data table you specify.
+- `docs/data-tables/connector/delete-records-condition-action.md` — **Delete records by condition action (batch)**: The delete records by condition batch action deletes records that match the filter conditions you specify, up to 200 records per run.
+- `docs/data-tables/connector/new-record-trigger.md` — **New record trigger (real-time)**: The new record trigger monitors a data table you specify in real-time for newly created records.
+- `docs/data-tables/connector/new-records-batch-trigger.md` — **New records trigger (batch)**: The new records trigger checks for new records in a data table you specify in batches.
+- `docs/data-tables/connector/new-updated-record-trigger.md` — **New/updated record trigger (real-time)**: The new/updated record trigger monitors a data table you specify in real-time for newly created or updated records.
+- `docs/data-tables/connector/new-updated-records-batch-trigger.md` — **New/updated records trigger (batch)**: The new/updated records trigger checks for new or updated records in a data table you specify in batches.
+- `docs/data-tables/connector/remove-values-from-record-action.md` — **Remove values from record action**: The remove values from record action removes column values from a record you specify.
+- `docs/data-tables/connector/search-records-action.md` — **Search records action (batch)**: The search records batch action retrieves a list of entries that match the search criteria you specify from a data table.
+- `docs/data-tables/connector/truncate-table-action.md` — **Truncate table action (batch)**: The truncate table batch action permanently deletes all of a data table's records.
+- `docs/data-tables/connector/update-record-action.md` — **Update record action**: The update record action updates a record you specify in a data table.
+- `docs/data-tables/connector/update-record-batch-action.md` — **Update records action (batch)**: The update records batch action updates multiple records in a data table you specify.
+- `docs/data-tables/connector/upsert-record-action.md` — **Upsert record action**: The upsert record action updates a record in a data table if it matches a primary key you specify.
+- `docs/data-tables/connector/upsert-record-batch-action.md` — **Upsert records action (batch)**: The upsert records batch action updates or creates multiple records in a data table in a single batch operation.
+- `docs/data-tables/data-table-connector.md` — **Data table connector**: Learn how the Workato Data table connector provides triggers and actions to use your data tables in recipes, with selectable JSON output formats.
+- `docs/data-tables/data-table-interface.md` — **User interface**: Manage Workato data tables at the project level, where you can create, edit, rename, delete, and download tables and columns from the UI.
+- `docs/data-tables/data-table-limits.md` — **Quotas**: Reference for Workato data table quotas, covering general table size, column, and connector trigger and action quotas.
+- `docs/data-tables/data-table-permissions.md` — **Data table permissions**: Set up data table permissions in Workato with RBAC and custom roles to control who can create, view, edit, and delete tables.
+- `docs/data-tables/user-interface/activity-audit.md` — **Activity audit**: Track changes to Workato data tables using the activity audit log, and filter activity for a specific table in shared workspaces.
+- `docs/data-tables/user-interface/column-create.md` — **Create a new column**: Create a new column in a Workato data table and set its name, column type, default value, and hint from the data tables interface.
+- `docs/data-tables/user-interface/column-delete.md` — **Delete a column**: Delete a column from a Workato data table using the ellipsis menu. Column deletion is permanent and cannot be undone.
+- `docs/data-tables/user-interface/column-edit.md` — **Edit a column**: Edit a Workato data table column to change its name, default value, and hint. Column type and required setting cannot be changed.
+- `docs/data-tables/user-interface/column-types.md` — **Column types**: Reference for the column data types supported in Workato data tables, with available operands for each type.
+- `docs/data-tables/user-interface/create.md` — **Create a new table**: Create a new Workato data table within a project by building the table structure from scratch or by importing a CSV file.
+- `docs/data-tables/user-interface/delete.md` — **Delete a data table**: Delete a data table in the Workato data tables interface and review the warning that lists recipes affected by the change.
+- `docs/data-tables/user-interface/download-csv.md` — **Download a new table as CSV**: Download a Workato data table from the data tables interface as a CSV file to export your table data for use outside Workato.
+- `docs/data-tables/user-interface/edit.md` — **Edit table data**: Edit Workato data table data by adding, updating, and deleting rows using your mouse or keyboard shortcuts in the data tables interface.
+- `docs/data-tables/user-interface/keyboard-shortcuts.md` — **Keyboard shortcuts**: Reference for Workato data table keyboard shortcuts on Mac and Windows for selecting, editing, and managing table data.
+- `docs/data-tables/user-interface/rename.md` — **Rename a data table**: Rename a data table in the Workato data tables interface by editing the table name and saving your changes.
+- `docs/data-tables/user-interface/view.md` — **View, filter, and sort table data**: View, filter, sort, and hide columns in Workato data tables to organize records in the data table interface.

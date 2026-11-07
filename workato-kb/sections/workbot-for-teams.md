@@ -1,0 +1,19 @@
+# Section: workbot-for-teams (17 pages)
+
+- `docs/workbot-for-teams/adaptive-card-blocks.md` — **Adaptive card blocks for Microsoft Teams**: Build rich Microsoft Teams messages with Workbot Adaptive card blocks that combine text, images, buttons, fact sets, and input fields.
+- `docs/workbot-for-teams/application-permissions.md` — **Application permissions for Enterprise Workbots**: Set up Application permissions to authenticate Workbot for Microsoft Teams Enterprise bots without a user-dependent connection or admin role.
+- `docs/workbot-for-teams/buttons-choices-task-modules.md` — **Workbot buttons, Task modules and Pick lists**: Configure Workbot buttons, task modules, and pick lists in Microsoft Teams to invoke commands and pass parameters to your recipes.
+- `docs/workbot-for-teams/files-for-bots.md` — **Files for Enterprise Workbot**: Let end users upload files to an Enterprise Workbot in Microsoft Teams using file parameters, with content stored in OneDrive for follow-up actions.
+- `docs/workbot-for-teams/getting-started.md` — **Set up Workbot for Microsoft Teams**: Learn how to set up and connect to Workbot for Microsoft Teams.
+- `docs/workbot-for-teams/guides/configure-enterprise-workbot-embed.md` — **Configure a Microsoft Teams Enterprise Workbot for Embedded users**: Configure a Microsoft Teams Enterprise Workbot for Embedded customers, from app package download to authenticating the customer connection.
+- `docs/workbot-for-teams/guides/creating-enterprise-workbot-app-studio.md` — **Create an Enterprise Workbot using the Microsoft App Studio**: Create a Microsoft Teams Enterprise Workbot using Microsoft App Studio, retained for reference after Microsoft deprecated App Studio.
+- `docs/workbot-for-teams/guides/creating-enterprise-workbot.md` — **Create a Microsoft Teams Enterprise Workbot**: Create a Microsoft Teams Enterprise Workbot with custom branding, OAuth profile, and permissions using the Microsoft Teams Developer Portal.
+- `docs/workbot-for-teams/guides/tabs.md` — **Tabs**: Reference for deprecated Enterprise Workbot Personal tabs in Microsoft Teams; the new Teams client does not support these Adaptive Cards tabs.
+- `docs/workbot-for-teams/ms-connection-error.md` — **Workbot for Microsoft Teams - Connection error**: Learn how to resolve connection errors when connecting Workbot for Microsoft Teams.
+- `docs/workbot-for-teams/passing-parameters.md` — **Passing parameters**: Pass parameters into Workbot recipes in Microsoft Teams using line commands, buttons, task modules, and pick lists to supply recipe context.
+- `docs/workbot-for-teams/proactive-messaging.md` — **Proactive messaging**: Send proactive Workbot messages to Microsoft Teams users without prior interaction to notify them of events from apps like Salesforce.
+- `docs/workbot-for-teams/using-workbot-for-teams.md` — **Using Workbot for Microsoft Teams**: Run Workbot commands in Microsoft Teams to perform app actions and post event notifications using buttons, task modules, and Post message.
+- `docs/workbot-for-teams/workbot-actions.md` — **Workato actions for Microsoft Teams**: Reference for Workbot actions in Microsoft Teams, including post message, post reply, delete message, and custom Microsoft Graph actions.
+- `docs/workbot-for-teams/workbot-ms-faqs.md` — **Workbot for Microsoft Teams FAQs**: Answers to common questions about Workbot for Microsoft Teams, including how it works with Workato recipes and runs business workflows.
+- `docs/workbot-for-teams/workbot-triggers.md` — **Workbot for Microsoft Teams triggers**: Reference for Workbot triggers in Microsoft Teams, including new command, help message, tab opened, and new message triggers for recipes.
+- `docs/workbot-for-teams/workbot.md` — **Workbot for Microsoft Teams**: Workbot for Microsoft Teams is a Workato chatbot that lets you monitor and interact with your business apps directly from Microsoft Teams.

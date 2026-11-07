@@ -1,0 +1,18 @@
+<!-- source: https://docs.workato.com/en/connectors/walmart-seller-center/update-record-action | lastmod: 2026-06-17 -->
+> The Update record action enables you to update the details of a specific record in the Walmart Seller Center.
+
+# Walmart Seller Center - Update record action
+
+The **Update record** action enables you to update the details of a specific record in the Walmart Seller Center.
+
+## Input
+
+| Input field | Description |
+| --- | --- |
+| Object | Specify the object you plan to update. Fields load dynamically based on the object you select. |
+
+## Output
+
+The output fields are determined by the object selected in the input. Map the relevant datapill from the datatree to subsequent steps.
+
+---
